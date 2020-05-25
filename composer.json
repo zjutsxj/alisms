@@ -1,0 +1,21 @@
+{
+    "name": "zjutsxj/alisms",
+    "description": "阿里云短信发送扩展 thinkphp5.1",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zjutsxj",
+            "email": "zjutsxj@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "alibabacloud/client": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "zjutsxj\\sms\\": "src"
+        }
+    }
+}
