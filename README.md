@@ -34,6 +34,7 @@ $sms->sendSms('18759201xxx',['code'=>123456]);
 |-|-|-|-|-|
 |security|boole|`false`|N|是否启用https|
 |host|string|`dysmsapi.aliyuncs.com`|N|阿里云短信服务器域名|
-|region_id|string|`cn-hangzhou`|Y|阿里云短信服务器所在地区,请从阿里云短信服务获取|
 |access_key|string||Y|你的阿里云accessKeyId|
 |access_secret|string||Y|你的阿里云accessSecrect|
+|sign_name|string||Y|短信签名|
+|template_code|string||Y|短信模板|
