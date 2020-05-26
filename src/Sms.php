@@ -83,6 +83,10 @@ class Sms
             $this->error = $e->getMessage();
         }
         return false;
+    }
 
+    public function getError()
+    {
+        return $this->error;
     }
 }
