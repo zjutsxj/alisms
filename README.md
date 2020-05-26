@@ -26,7 +26,7 @@ return [
 use yimao\alisms\Sms;
 
 $sms = new Sms;
-$sms->sendSms('18759201xxx',['code'=>123456]);
+$sms->sendSms('18759201xxx', '123456');
 ```
 
 ### config remark
