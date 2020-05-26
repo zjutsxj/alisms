@@ -1,6 +1,11 @@
 # alisms
-php plugin for aliyun sms,only send sms  
-https://help.aliyun.com/document_detail/55359.html?spm=a2c4g.11186623.4.3.79a04e6atw9hnY
+使用在 Thinkphp5.1 里的阿里云 短信服务  
+
+参考：https://help.aliyun.com/document_detail/55359.html?spm=a2c4g.11186623.4.3.79a04e6atw9hnY  
+说明：[PHP]（仅支持5.5以上版本），[SDK轻量版]（轻量版支持php>=5.4，使用方法：先运行Test.php测试PHP环境，测试成功后再运行Demo）  
+
+参考：https://github.com/aliyun/openapi-sdk-php  
+本扩展只是封装了 [SDK轻量版] 实现的功能也只能发送验证码短信。
 
 ## install
 ```

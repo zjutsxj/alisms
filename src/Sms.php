@@ -26,7 +26,7 @@ class Sms
     public function __construct($config = [])
     {
         // 配置文件
-        $default = Config::get('alisms', []);
+        $default = Config::get('alisms.', []);
 
         // 生成配置
         $config = array_merge($default, $config);
