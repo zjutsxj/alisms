@@ -17,8 +17,11 @@ class Sms
         'access_key' => '',
         'access_secret' => '',
 
-        'sign_name' => '', // 短信签名
-        'template_code' => '', // 短信模板Code
+        'cn_sign_name' => '', // 国内 短信签名
+        'cn_temp_code' => '', // 国内 短信模板Code
+
+        'en_sign_name' => '', // 国际 短信签名
+        'en_temp_code' => '', // 国际 短信模板Code
     ];
 
     private $error = 'not error';
@@ -39,7 +42,7 @@ class Sms
     public function sendCode($phone, $code)
     {
         $config = $this->config;
-        $keys = ['access_key', 'access_secret', 'sign_name', 'template_code'];
+        $keys = ['access_key', 'access_secret', 'cn_sign_name', 'cn_temp_code'];
         foreach ($keys as $key) {
             if (empty($config[$key])) {
                 $this->error = $key . ' 不存在!';
@@ -53,10 +56,10 @@ class Sms
         $params["PhoneNumbers"] = $phone;
 
         // fixme 必填: 短信签名，应严格按"签名名称"填写，请参考: https://dysms.console.aliyun.com/dysms.htm#/develop/sign
-        $params["SignName"] = $config['sign_name'];
+        $params["SignName"] = $config['cn_sign_name'];
 
         // fixme 必填: 短信模板Code，应严格按"模板CODE"填写, 请参考: https://dysms.console.aliyun.com/dysms.htm#/develop/template
-        $params["TemplateCode"] = $config['template_code'];
+        $params["TemplateCode"] = $config['cn_temp_code'];
 
         // fixme 可选: 设置模板参数, 假如模板中存在变量需要替换则为必填项
         $params['TemplateParam'] = array(
@@ -89,7 +92,7 @@ class Sms
     public function sendPassword($phone, $password)
     {
         $config = $this->config;
-        $keys = ['access_key', 'access_secret', 'sign_name', 'template_code'];
+        $keys = ['access_key', 'access_secret', 'cn_sign_name', 'cn_temp_code'];
         foreach ($keys as $key) {
             if (empty($config[$key])) {
                 $this->error = $key . ' 不存在!';
@@ -103,10 +106,10 @@ class Sms
         $params["PhoneNumbers"] = $phone;
 
         // fixme 必填: 短信签名，应严格按"签名名称"填写，请参考: https://dysms.console.aliyun.com/dysms.htm#/develop/sign
-        $params["SignName"] = $config['sign_name'];
+        $params["SignName"] = $config['cn_sign_name'];
 
         // fixme 必填: 短信模板Code，应严格按"模板CODE"填写, 请参考: https://dysms.console.aliyun.com/dysms.htm#/develop/template
-        $params["TemplateCode"] = $config['template_code'];
+        $params["TemplateCode"] = $config['cn_temp_code'];
 
         // fixme 可选: 设置模板参数, 假如模板中存在变量需要替换则为必填项
         $params['TemplateParam'] = array(

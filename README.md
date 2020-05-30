@@ -22,8 +22,11 @@ return [
     'access_key' => '',
     'access_secret' => '',
 
-    'sign_name' => '', // 短信签名
-    'template_code' => '', // 短信模板Code
+    'cn_sign_name' => '', // 国内 短信签名
+    'cn_temp_code' => '', // 国内 短信模板Code
+
+    'en_sign_name' => '', // 国际 短信签名
+    'en_temp_code' => '', // 国际 短信模板Code
 ];
 ```
 ### 使用
