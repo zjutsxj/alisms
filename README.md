@@ -31,7 +31,10 @@ return [
 use yimao\alisms\Sms;
 
 $sms = new Sms;
-$sms->sendSms('18759201xxx', '123456');
+// 发送验证码 短信模板中有${code}变量
+$sms->sendCode('18759201xxx', '123456');
+// 发送动态密码 短信模板中有${password}变量
+$sms->sendPassword('18759201xxx', '123456');
 ```
 
 ### config remark
